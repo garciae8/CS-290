@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset some default styles */
+        body, h1, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global styles */
+        body {
+            font: 16px Arial, sans-serif;
+            line-height: 1.5;
+            color: white;
+            /* Apply the gradient background to the body */
+            background: linear-gradient(to bottom right, hotpink, yellow);
+            margin: 0; /* Reset margin to ensure the gradient covers the entire page */
+            min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+            display: flex;
+            flex-direction: column;
+            background-image: url(./images/Deep_Sea.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #5F9EA0;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        #main-heading {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        /* Search Box */
+        .search-box {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+
+        .search-input {
+            padding: 5px;
+            width: 150px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-button {
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Dropdown styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #5F9EA0; /* Match the header background color */
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+            padding: 5px 0;
+        }
+
+        .dropdown-content a {
+            color: #fff; /* Match the header text color */
+            padding: 8px 16px; /* Adjusted padding */
+            display: block;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #4682B4;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Main content styles */
+        main {
+            margin: 20px;
+        }
+
+        .app-section {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .section-paragraph {
+            font-style: italic;
+        }
+
+        .section-list {
+            list-style-type: none;
+        }
+
+        .ptag_background {
+            background-color: rgba(255, 255, 255, 0.4);
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+            overflow: visible;
+            width: 50%;
+            height: 200%;
+            padding: 20px;
+            border: 1px black;
+            -webkit-box-decoration-break: clone;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #5F9EA0;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-top: auto;   
+        }
+    </style>
+    <title>Sponges</title>
+
+    <header>
+        <h1 id="main-heading">Sponge Facts</h1>
+        <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button" onclick="search()">Search</button>
+        </div>
+        <!-- Navigation -->
+        <nav>
+            <ul class="spongelist">
+                <li><a href="./Sponge_FrontPagefinal.html">Home</a></li>
+                <li><a href="Sponge_AboutPagefinal.html">About</a></li>
+                <li><a href="./Sponge_Contactsfinal.html">Contact</a></li>
+                <li><a href="./Sponge_SeaSpongesfinal.html">Sea Sponges</a></li>
+                <!-- New Forums Link -->
+                <li class="dropdown">
+                    <span class="nav-link">Forums</span>
+                    <div class="dropdown-content">
+                        <a href="./Sponge_Forums_Page1_final.html">Page 1</a>
+                        <a href="./Sponge_Forums_Page2_final.html">Page 2</a>
+                        <a href="./Sponge_Forums_Page3_final.html">Page 3</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <a href="#">Home</a> > <a href="#">Category</a> > Current Page
+        </div>
+    </header>
+
+
+    <main>
+        <section>
+            <h2>Interesting Sea Sponge Species</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LYPiGt7E07A?si=HgUzgVfxIGBPDvxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+            </iframe>
+
+            <p class="ptag_background">A sea sponge is a multicellular, aquatic organism belonging to the phylum Porifera, characterized by a porous body structure. These simple aquatic animals lack true tissues and organs but play a crucial role in marine ecosystems by filtering water and providing habitats for various organisms. Harvested for various purposes, natural sea sponges are often used commercially for bathing, cleaning, and painting. <br> Feel free to check out all the species of sea sponges we have listed on our page below!!!!</p>
+        </section>
+
+</body>
+<script>
+// Add this JavaScript code to handle the dropdown functionality
+document.addEventListener('DOMContentLoaded', function () {
+    var dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(function (dropdown) {
+        dropdown.addEventListener('mouseover', function () {
+            this.querySelector('.dropdown-content').style.display = 'block';
+        });
+        dropdown.addEventListener('mouseout', function () {
+            this.querySelector('.dropdown-content').style.display = 'none';
+        });
+    });
+});
+</script>
+</html>

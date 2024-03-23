@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset some default styles */
+        body, h1, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            background: linear-gradient(to bottom right, plum, hotpink);
+            margin: 0; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #5F9EA0;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            text-decoration: underline;
+            position: relative; /* Add position relative for stacking the search box */
+        }
+
+        #main-heading {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Search Box */
+        .search-box {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+
+        .search-input {
+            padding: 5px;
+            width: 150px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-button {
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        nav {
+            margin-top: 10px;
+            list-style: none; /* Remove list-style to eliminate bullets */
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            display: inline-block; /* Make the links display as inline-block */
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #5F9EA0;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+            margin-top: 10px; /* Adjusted margin-top */
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-link {
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #fff; /* Match the header text color */
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #4682B4;
+        }
+
+        /* Main content styles */
+        main {
+            margin: 20px;
+        }
+
+        .app-section {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .section-paragraph {
+            font-style: italic;
+        }
+
+        .section-list {
+            list-style-type: none;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #5F9EA0;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-top: auto; /* Push the footer to the bottom */
+        }
+
+        td[colspan] {
+            background-color: yellow;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+    <title>Contact_Info</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="main-heading">Sponge Facts</h1>
+        <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button" onclick="search()">Search</button>
+        </div>
+        <!-- Navigation -->
+        <nav>
+            <ul class="spongelist">
+                <li><a href="./Sponge_FrontPagefinal.html">Home</a></li>
+                <li><a href="Sponge_AboutPagefinal.html">About</a></li>
+                <li><a href="./Sponge_Contactsfinal.html">Contact</a></li>
+                <li><a href="./Sponge_SeaSpongesfinal.html">Sea Sponges</a></li>
+                <!-- New Forums Link -->
+                <li class="dropdown">
+                    <span class="nav-link">Forums</span>
+                    <div class="dropdown-content">
+                        <a href="./Sponge_Forums_Page1_final.html">Page 1</a>
+                        <a href="./Sponge_Forums_Page2_final.html">Page 2</a>
+                        <a href="./Sponge_Forums_Page3_final.html">Page 3</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <a href="#">Home</a> > <a href="#">Category</a> > Current Page
+        </div>
+    </header>
+
+
+    <main>
+        <table>
+            <caption>Contact Details!</caption>
+            <thead>
+                <tr>
+                    <th>Mode of communication</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Email</td>
+                    <td>Contact_Sponge@spongemail.com</td>
+                </tr>
+
+                <tr>
+                    <td>Phone Number</td>
+                    <td>SPONGE-9800</td>
+                </tr>
+                <tr>
+                    <td>FAX</td>
+                    <td>FAXSP-0000</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Social Media: @Spongefacts2000</td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sponge Facts</p>
+    </footer>
+
+</body>
+
+</html>
+

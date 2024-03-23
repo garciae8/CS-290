@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset some default styles */
+        body, h1, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            /* Apply the gradient background to the body */
+            background: linear-gradient(to bottom right, lightblue, plum);
+            margin: 0; /* Reset margin to ensure the gradient covers the entire page */
+            min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #5F9EA0;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            text-decoration: underline;
+            position: relative; /* Add position relative for stacking the search box */
+        }
+
+        #main-heading {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Search Box */
+        .search-box {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+
+        .search-input {
+            padding: 5px;
+            width: 150px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-button {
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        /* Drop-down Menu */
+        .dropdown {
+            /* Add styles for dropdown menu */
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #5F9EA0;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-link {
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #fff; /* Match the header text color */
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #4682B4;
+        }
+
+        /* Main content styles */
+        main {
+            margin: 20px;
+            flex: 1; /* Take remaining space */
+        }
+
+        .app-section {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .section-paragraph {
+            font-style: italic;
+        }
+
+        .section-list {
+            list-style-type: none;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #5F9EA0;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-top: auto; /* Push the footer to the bottom */
+        }
+
+        .spongelist {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <title>Sponges</title>
+</head>
+
+<body role="document">
+    <header>
+        <h1 id="main-heading">Sponge Facts</h1>
+        <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button" onclick="search()">Search</button>
+        </div>
+        <!-- Navigation -->
+        <nav>
+            <ul class="spongelist">
+                <li><a href="./Sponge_FrontPagefinal.html">Home</a></li>
+                <li><a href="Sponge_AboutPagefinal.html">About</a></li>
+                <li><a href="./Sponge_Contactsfinal.html">Contact</a></li>
+                <li><a href="./Sponge_SeaSpongesfinal.html">Sea Sponges</a></li>
+                <!-- New Forums Link -->
+                <li class="dropdown">
+                    <span class="nav-link">Forums</span>
+                    <div class="dropdown-content">
+                        <a href="./Sponge_Forums_Page1_final.html">Page 1</a>
+                        <a href="./Sponge_Forums_Page2_final.html">Page 2</a>
+                        <a href="./Sponge_Forums_Page3_final.html">Page 3</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <a href="#">Home</a> > <a href="#">Category</a> > Current Page
+        </div>
+    </header>
+
+
+
+    <main>
+        <section>
+            <h2>What is the Sponge Website for?</h2>
+            <img src="./Images/Sponges.jpg" alt="Sponges" style="width:200px">
+            <p id="outputParagraph">The sponge website was made for sponge fans to learn more about sponges<br> Its open to avid fans or newcomers alike <br> As well to help give common information about sponges to help all,<br> Lastly make sure that the internet has a place for all to talk about sponges </p>
+        </section>
+
+        <!-- Input Section -->
+        <div class="app-section">
+            <h2>Input Section</h2>
+            <label for="inputText">Enter a Fact:</label>
+            <input type="text" id="inputText" placeholder="Type a sponge fact...">
+            <button onclick="addSpongeFact()">Add Fact</button>
+        </div>
+
+        <!-- Output Section -->
+        <div class="app-section">
+            <h2>Output Section</h2>
+            <ul class="spongelist" id="spongeList"></ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sponge Facts</p>
+    </footer>
+
+    <script>
+        // Variables to store sponge facts
+        var spongeFacts = [];
+
+        // Function to handle the search button click
+        function search() {
+            var searchInput = document.getElementById('searchInput').value;
+            // You can implement search functionality here
+            alert('Searching for: ' + searchInput);
+        }
+
+        // Function to add a sponge fact to the list
+        function addSpongeFact() {
+            var inputText = document.getElementById('inputText').value;
+            var outputParagraph = document.getElementById('outputParagraph');
+            var spongeList = document.getElementById('spongeList');
+
+            // Update the output paragraph
+            outputParagraph.innerHTML += "<p>New Sponge Fact: " + inputText + "</p>";
+
+            // Add the fact to the list
+            var listItem = document.createElement('li');
+            listItem.textContent = inputText;
+            spongeList.appendChild(listItem);
+
+            // Store the fact in the variable
+            spongeFacts.push(inputText);
+
+            // Clear the input field
+            document.getElementById('inputText').value = '';
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+
