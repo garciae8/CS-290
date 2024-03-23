@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponge Facts!</title>
+    <style>
+        /* Reset some default styles */
+        body,
+        h1,
+        p,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            /* Apply the gradient background to the body */
+            background-color: red;
+            /* For browsers that do not support gradients */
+            background-image: linear-gradient(to bottom right, lightgreen, lightblue);
+            margin: 0;
+            /* Reset margin to ensure the gradient covers the entire page */
+        }
+
+        /* Header styles */
+        header {
+            background-color: #5F9EA0;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            text-decoration: underline;
+            position: relative;
+            /* Add position relative for stacking the search box */
+        }
+
+        #main-heading {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Search Box */
+        .search-box {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+
+        .search-input {
+            padding: 5px;
+            width: 150px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-button {
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        nav {
+            margin: 10px;
+            /* Navigation list - Horizontal */
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            /* Navigation list - Vertical */
+            /* Add specific styles for vertical navigation */
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            /* Add styles for breadcrumbs */
+            margin: 10px;
+            padding: 5px;
+            background-color: #5F9EA0;
+            /* Match the header background color */
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        /* Drop-down Menu */
+        .dropdown {
+            /* Add styles for dropdown menu */
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #5F9EA0;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-link {
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            /* Match the header text color */
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #4682B4;
+        }
+
+        /* Sitemap */
+        .sitemap {
+            /* Add styles for sitemap */
+            margin: 10px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        /* Main content styles */
+        main {
+            margin: 20px;
+            /* Fixed-width Layout */
+            /* Add styles for fixed-width layout */
+        }
+
+        .app-section {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .section-paragraph {
+            font-style: italic;
+        }
+
+        .section-list {
+            list-style-type: none;
+        }
+
+        /* Additional Styles for the "ocean" class */
+        .ocean {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 20px;
+            font-variant: initial;
+            font-weight: bold;
+            background-color: #00A36C;
+            color: black;
+            border: 2px solid black;
+            margin: 5px;
+            padding: 20px;
+        }
+
+        .spongelist {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Float */
+        .float-left {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .float-right {
+            float: right;
+            margin-left: 10px;
+        }
+
+        /* Inheritance */
+        .inheritance-example {
+            /* Add styles to demonstrate inheritance */
+        }
+
+        /* Clear */
+        .clear {
+            clear: both;
+        }
+
+        /* Position */
+        .absolute-position {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Z-index */
+        .z-index-example {
+            z-index: 1;
+        }
+
+        /* Display */
+        .display-example {
+            display: block;
+        }
+
+        /* Fluid Layout */
+        /* Add styles for fluid layout */
+
+        /* Responsive Layout */
+        @media screen and (max-width: 768px) {
+            /* Add styles for responsive layout */
+        }
+    </style>
+
+</head>
+
+<body onload = "reloadfunction()">
+    <header>
+        <h1 id="main-heading">Sponge Facts</h1>
+        <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button" onclick="search()">Search</button>
+        </div>
+        <!-- Navigation -->
+        <nav>
+            <ul class="spongelist">
+                <li><a href="./Sponge_FrontPage4.html">Home</a></li>
+                <li><a href="Sponge_AboutPage4.html">About</a></li>
+                <li><a href="./Sponge_Contacts4.html">Contact</a></li>
+                <li><a href="./Sponge_SeaSponges4.html">Sea Sponges</a></li>
+                <!-- New Forums Link -->
+                <li class="dropdown">
+                    <span class="nav-link">Forums</span>
+                    <div class="dropdown-content">
+                        <a href="#">Page 1</a>
+                        <a href="#">Page 2</a>
+                        <a href="#">Page 3</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <a href="#">Home</a> > <a href="#">Category</a> > Current Page
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Useful Info About Sponges</h2>
+            <p>They soak up water<br> They shrink when dry <br> They grow when wet,<br> They clean almost anything</p>
+        </section>
+
+        <section>
+            <h2>How to use a sponge</h2>
+
+            <div class="ocean">
+                <h3>How to use a sponge for cleaning objects</h3>
+                <ul class="spongelist">
+                    <li>Step 1: Grab the sponge.</li>
+                    <li>Step 2: Wet the sponge.</li>
+                    <li>Step 3: Squeeze out excess water.</li>
+                    <li>Step 4: Use different sides for cleaning.</li>
+                </ul>
+            </div>
+            <div class="ocean">
+                <h3>How to use a sponge for cleaning dishes</h3>
+                <ul class="spongelist">
+                    <li>Step 1: Wet the sponge.</li>
+                    <li>Step 2: Apply dish soap.</li>
+                    <li>Step 3: Scrub dishes with the soft side.</li>
+                    <li>Step 4: Use the scrubby side for tougher stains.</li>
+                    <li>Step 5: Rinse dishes, squeeze out excess water from the sponge, and let dishes air dry.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Input Section -->
+        <!-- Sponge Facts Section -->
+        <div class="app-section">
+            <h2>Share a Sponge Fact</h2>
+            <ul class="spongelist" id="spongeList"></ul>
+
+
+	    <label for="factEntry">Enter a fact:</label>
+	    <input type="text" id="factEntry" name="factEntry"><br><br>
+
+	    <button onclick="myFunction()">Save Fact</button> 
+	    <p id="noInput"></p>
+
+	    <p id="Factslist"></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sponge Facts</p>
+    </footer>
+    <script>
+	function reloadfunction() {
+		document.getElementById("Factslist").innerHTML = localStorage.getItem(0);
+	}
+	function myFunction() {
+    
+    	let factInput = document.getElementById("factEntry").value
+
+    	if(!factInput){
+        	document.getElementById("noInput").innerHTML = "Please provide an input";
+        	return;
+    	}
+    	document.getElementById("noInput").innerHTML = "";
+    	let text = localStorage.getItem(0);
+    
+   	 if(!text){
+        	text = "";
+    	}
+        
+    	text = text + "<br>" + factInput;
+    	console.log("text assigned");
+
+    	localStorage.setItem(0, text);
+
+    	document.getElementById("Factslist").innerHTML = localStorage.getItem(0);
+    	document.getElementById('factEntry').value = '';
+
+	}
+     </script>
+</body>
+
+</html>
+
+

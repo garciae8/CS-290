@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponge Facts!</title>
+    <style>
+        /* Reset some default styles */
+        body,
+        h1,
+        p,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            /* Apply the gradient background to the body */
+            background: linear-gradient(to bottom right, yellow, aquamarine);
+            margin: 0;
+            /* Reset margin to ensure the gradient covers the entire page */
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #5F9EA0;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        #main-heading {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        /* Main content styles */
+        main {
+            flex: 1;
+            margin: 20px;
+        }
+
+        .app-section {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .section-paragraph {
+            font-style: italic;
+        }
+
+        .section-list {
+            list-style-type: none;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #5F9EA0;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="main-heading">Sponge Facts</h1>
+        <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button" onclick="search()">Search</button>
+        </div>
+        <!-- Navigation -->
+        <nav>
+            <ul class="spongelist">
+                <li><a href="./Sponge_FrontPage5.html">Home</a></li>
+                <li><a href="Sponge_AboutPage5.html">About</a></li>
+                <li><a href="./Sponge_Contacts5.html">Contact</a></li>
+                <li><a href="./Sponge_SeaSponges5.html">Sea Sponges</a></li>
+                <!-- New Forums Link -->
+                <li class="dropdown">
+                    <span class="nav-link">Forums</span>
+                    <div class="dropdown-content">
+                        <a href="./Sponge_Forums_Page1_5.html">Page 1</a>
+                        <a href="./Sponge_Forums_Page2_5.html">Page 2</a>
+                        <a href="./Sponge_Forums_Page3_5.html">Page 3</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <a href="#">Home</a> > <a href="#">Category</a> > Current Page
+        </div>
+    </header>
+
+
+    <main>
+        <section>
+            <!-- Content for Forums Page Goes Here -->
+            <h2>Forums</h2>
+            <p>Welcome to our community forums. Engage in discussions about sea sponges and more!</p>
+            <!-- Add more content as needed -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sponge Facts</p>
+    </footer>
+
+</body>
+
+</html>
+
